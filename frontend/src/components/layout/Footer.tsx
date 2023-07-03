@@ -1,4 +1,5 @@
 import React, { type ReactElement } from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = (): ReactElement => {
   return (
@@ -10,7 +11,7 @@ const Footer = (): ReactElement => {
           rel="noreferrer"
         >
           <svg
-            className="h-12 w-12 hover:cursor-pointer"
+            className="h-12 w-12 hover:cursor-pointer hover:text-gray-300 "
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -21,9 +22,20 @@ const Footer = (): ReactElement => {
           </svg>
         </a>
       </div>
-      <p className="w-full flex items-center justify-center mt-3">
-        <span className="font-bold pr-2">Created by:</span>James Prentice 2023
-      </p>
+
+      <div className="flex items-center justify-center mt-8">
+        <NavLink to="/privacy">
+          <small className="hover:text-gray-300">Privacy Policy</small>
+        </NavLink>
+        &nbsp;|&nbsp;
+        <NavLink to="/terms">
+          <small className="hover:text-gray-300">Terms of Service</small>
+        </NavLink>
+        {/* &nbsp;|&nbsp;
+        <NavLink to="/about">
+          <small className="hover:text-gray-300">About</small>
+        </NavLink> */}
+      </div>
     </footer>
   );
 };

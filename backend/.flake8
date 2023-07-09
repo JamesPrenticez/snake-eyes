@@ -1,0 +1,14 @@
+[flake8]
+exclude =
+	venv
+	migrations
+	__pycache__
+	manage.py
+	settings.py
+	.coverage
+	.dockerignore
+	docker-compose.debug.yml
+	docker-compose.yml
+	Dockerfile
+	env
+	.env

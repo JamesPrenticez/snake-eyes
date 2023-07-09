@@ -41,9 +41,14 @@ update the .env file
 To run all the tests:
 
 ============================================
+Activate Virtual Environment
 ============================================
 ```sh
-python -m pytest -v
+	python -m pytest -v
+
+	_and_
+
+	deactivate
 ```
 ============================================
 ============================================

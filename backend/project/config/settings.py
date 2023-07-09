@@ -10,7 +10,8 @@ class Config:
 	JSONIFY_PRETTYPRINT_REGULAR = True # Format JSON output for the api
 	SQLALCHEMY_TRACK_MODIFICATIONS = False
 	SQLALCHEMY_ECHO = False
-
+	SESSION_COOKIE_DOMAIN = 'localhost.localdomain' 
+	# SESSION_COOKIE_DOMAIN=os.getenv('SESSION_COOKIE_DOMAIN') # DOCKER doesnt pick up the env file how to fix?
 	APPLICATION_ROOT = '/'
 	PREFERRED_URL_SCHEME = 'http'
 

@@ -1,18 +1,13 @@
 import pytest
-
-from ..main import create_app
+from project import create_app
 
 @pytest.yield_fixture(scope='session')
 def app():
 	"""
 		Setup our flask test app, this only gets executed once.
 	"""
-	params = {
-		'DEBUG': False,
-		'TESTING': True,
-	}
 
-	_app = create_app(config_env="testing", settings_override=params)
+	_app = create_app(config_env="testing")
 
 	# Establish an application context before running the tests.
 	ctx = _app.app_context()

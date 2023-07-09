@@ -1,5 +1,6 @@
 from flask import Flask
-from config import config
+from .config.settings import config
+from .config.colors import colors
 
 def create_app(config_env, settings_override=None):
 	app = Flask(
@@ -13,6 +14,17 @@ def create_app(config_env, settings_override=None):
 		app.config.update(settings_override)
 
 	register_blueprints(app)
+	
+
+	url = f'http://localhost:{config[config_env].FLASK_RUN_PORT}'
+	link = f'\033]8;;{url}\a{url}\033]8;;\a'
+	print(
+		colors.PURPLE, "FlaskApp initalized in:",
+		colors.GREEN, config_env, 
+		colors.BLUE, 'on PORT:',
+		colors.CYAN, link,
+		colors.END
+  )
 
 	return app
 

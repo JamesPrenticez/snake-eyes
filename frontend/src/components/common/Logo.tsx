@@ -1,12 +1,13 @@
 import React, { type ReactElement } from "react";
 
 interface Props {
-  width: number | string;
+  width?: number | string;
 }
 
 const Logo = ({ width = 32 }: Props): ReactElement => {
   return (
     <svg
+      data-testid="logo-svg"
       width={width}
       viewBox="0 0 600 600"
       xmlns="http://www.w3.org/2000/svg"

@@ -16,13 +16,17 @@
 ### Remove containers
 ```sh
 	docker-compose rm -f
+	
+	_or_
+
+	docker-compose rm --all
 ```
 
 ### Check for dangling images
 ```sh
 	docker image
 
-	_and_
+	_or_
 
 	docker rmi -f $(docker images -qf dangling=true)
 ```
@@ -40,4 +44,27 @@
 ### Linting
 ```sh 
 	docker-compose exec backend flake8 .
+```
+
+# CLI 
+Its hard to remember all these commands and flags so we set up a CLI app to help make that easy
+
+### Get all commands avliable in our app
+
+```sh
+	docker-compose exec backend snakeeyes
+
+	_or_ 
+
+	docker-compose exec backend snakeeyes flake8
+	docker-compose exec backend snakeeyes flake8 --help
+	docker-compose exec backend snakeeyes flake8 --no-skip-init
+
+	_or_ 
+
+	docker-compose exec backend snakeeyes cov
+
+	_or_
+
+	docker-compose exec backend snakeeyes test
 ```

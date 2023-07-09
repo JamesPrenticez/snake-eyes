@@ -1,0 +1,2 @@
+[console_scripts]
+snakeeyes = cli.cli:cli

@@ -14,6 +14,10 @@ ENV PYTHONUNBUFFERED=1
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
+# Egg info - python package for active development
+COPY . .
+RUN pip install --editable . 
+
 WORKDIR /project
 COPY . /project
 

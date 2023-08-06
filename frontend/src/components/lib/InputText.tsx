@@ -1,24 +1,16 @@
 import React, { type ReactElement } from "react";
 
-interface InputProps {
+interface Props {
   id?: string;
-  label?: string;
+  label: string;
   name?: string;
   placeholder?: string;
   type?: string;
   value: string | number;
   onChange?: (e: any) => void;
-  css?: {
-    label?: object;
-    input?: object;
-  };
-  cbcss?: {
-    label?: string;
-    input?: string;
-  };
 }
 
-export const Input = ({
+const InputText = ({
   id,
   name,
   label,
@@ -26,19 +18,15 @@ export const Input = ({
   type,
   value,
   onChange,
-  css,
-  cbcss,
-}: InputProps): ReactElement => {
+}: Props): ReactElement => {
   return (
     <label
       htmlFor={label}
-      className={cbcss?.label ?? ""}
       style={{
         display: "flex",
         alignItems: "center",
         padding: "0.25rem",
         fontWeight: 500,
-        ...css?.input,
       }}
     >
       {label}
@@ -48,14 +36,11 @@ export const Input = ({
         placeholder={placeholder}
         type={type}
         value={value}
-        className={`ring-1 ring-theme-tertiary focus:ring-theme-quaternary outline-none ml-[0.25rem] px-[0.5rem] py-[0.25rem] rounded-sm grow w-full placeholder-gray1 ${
-          cbcss?.input ?? ""
-        }`}
-        style={{
-          ...css?.input,
-        }}
+        className={`ring-1 ring-theme-tertiary focus:ring-theme-quaternary outline-none ml-[0.25rem] px-[0.5rem] py-[0.25rem] rounded-sm grow w-full placeholder-gray-500`}
         onChange={onChange}
       />
     </label>
   );
 };
+
+export default InputText

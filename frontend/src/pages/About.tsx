@@ -1,8 +1,8 @@
-import React, { type ReactElement } from "react";
+import React from "react";
 import Body from "../components/layout/Body";
 import { Icon } from "../components/icons/Icon";
 
-const About = (): ReactElement => {
+const About = () => {
   return (
     <Body>
       <h1>About</h1>

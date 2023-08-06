@@ -14,7 +14,7 @@ const Navbar = (): ReactElement => {
           </div>
         </NavLink>
 
-        <div className="flex space-x-2 cursor-pointer">
+        <div className="flex space-x-2 cursor-pointer p-4">
           {pages.map(
             (page) =>
               !page.requiresAuth && (
@@ -23,11 +23,11 @@ const Navbar = (): ReactElement => {
                   to={page.url}
                   style={({ isActive }) =>
                     isActive
-                      ? { color: "  rgb(234 179 8)" }
-                      : { color: "rgb(255 255 255)" }
+                      ? { backgroundColor: "rgb(109 40 217)" }
+                      : { backgroundColor: "transparent" }
                   }
                 >
-                  <p className="hover:text-yellow-500">{page.name}</p>
+                  <p className="hover:text-white px-3 py-2 rounded-md">{page.name}</p>
                 </NavLink>
               )
           )}

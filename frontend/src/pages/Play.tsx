@@ -1,8 +1,8 @@
-import React from "react";
-import Body from "../components/layout/Body";
-import ThreeCards from "../components/common/ThreeCards";
+import React from 'react'
+import Dice from '../components/dice/Dice'
+import Body from '../components/layout/Body'
 
-const Home = () => {
+const Play = () => {
   return (
     <Body>
       <div className=" max-w-5xl mx-auto">
@@ -12,20 +12,16 @@ const Home = () => {
             <h2 className="text-7xl font-extrabold text-transparent bg-clip-text" style={{backgroundImage: "linear-gradient(52deg, #1cd689  3%, #22cfaf  97%)" }}>
               Feeling Lucky? 
             </h2>
-            <h2 className="text-2xl text-gray-400 font-normal">
-              Test your luck against roll of the dice and win 
-            </h2>
+
+              <Dice />
           </div>
-          <ThreeCards />
         </div>
       </div>
     </Body>
-  );
-};
+  )
+}
 
-export default Home;
+export default Play
 
-// https://mantine.dev/
-// Greyclif CF
-// convert to svg to reduce initial load on home page
-// linear-gradient(52deg, #1c7ed6 3%, #22b8cf 97%)
+// https://codepen.io/reets/pen/RaJJZj
+// https://codepen.io/Jayjava/pen/rNjNrLL

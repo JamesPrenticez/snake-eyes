@@ -35,7 +35,7 @@ const Card = ({title, content, icon, callToAction}: CardProps): ReactElement => 
 
 const PlayNowButton = (): ReactElement => {
   return (
-    <NavLink to="/signup">
+    <NavLink to="/play">
       <button className='px-6 py-2 rounded text-white font-medium bg-blue-500 hover:bg-blue-400 cursor-pointer mt-4'>
         Play Now
       </button>

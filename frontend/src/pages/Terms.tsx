@@ -1,11 +1,11 @@
-import React, { type ReactElement } from 'react'
+import React from 'react'
 import Body from '../components/layout/Body';
 import style from '../styles/markdown.module.css';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw"; // Allows for html markup in md files
 import markdownContent from '../data/terms.md?raw';
 
-const Terms = (): ReactElement => {
+const Terms = () => {
   return (
     <Body>
       <div className='pt-12 px-12'>

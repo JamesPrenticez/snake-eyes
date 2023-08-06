@@ -6,6 +6,8 @@ import Loading from "./components/common/Loading";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Play from "./pages/Play";
+import Contact from "./pages/Contact";
 
 const Home = lazy(async () => {
   const [moduleExports] = await Promise.all([
@@ -28,6 +30,8 @@ const App = (): React.ReactElement => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/play" element={<Play />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/about" element={<About />} />

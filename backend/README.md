@@ -1,11 +1,10 @@
-
 # Backing Sheets - Backend
 ## Installation Instructions
 Azure Functions require Python 3.9.x
 
-### Installation
-Hint: You may need to run terminal as administrator
-
+============================================
+### INSTALLING/SETUP VIRTUAL ENVIRONMENT
+============================================
 ```sh
 pip install virtualenv
 ```
@@ -14,58 +13,54 @@ pip install virtualenv
 virtualenv venv --python=python3.9.13
 ```
 ============================================
-ENV 
+### SPINNING UP VIRTUAL ENVIRONMENT
 ============================================
 ```sh
-. venv/Scripts/activate
-```
-============================================
-DOCKER 
-============================================
-```sh
-docker-compose up --build
-```
-============================================
-============================================
-
-```sh
-pip install -r requirements.txt
-```
-
-cd backend 
-cp .env.example .env
-update the .env file
-
-## Testing
-
-To run all the tests:
-
-============================================
-Activate Virtual Environment
-============================================
-```sh
-	python -m pytest -v
+	. venv/Scripts/activate
 
 	_and_
 
 	deactivate
+
 ```
 ============================================
+### REQUIREMENTS
 ============================================
+```sh
+	pip install -r requirements.txt
+```
 
-To check the code coverage of the tests:
+============================================
+### SET ENVIORNMENT VARIABLES
+============================================
+cd backend 
+cp .env.example .env
+update the .env file
 
+============================================
+### TESTING
+============================================
+```sh
+	python -m pytest -v
+
+```
+============================================
+### TEST COVERAGE
+============================================
 ```sh
 python -m pytest --cov-report term-missing --cov=project
 ```
 
-## Formatting code
+============================================
+### LINTING / FORMATTING
+============================================
 ```sh 
-autopep8 --in-place --aggressive --recursive project
+	autopep8 --in-place --aggressive --recursive project
 ```
-===
 
-## File Structure 
+============================================
+### FILE STRUCTURE
+============================================
 root
 │   README.md
 │   app.py
@@ -100,7 +95,9 @@ root
     │   __init__.py
     │   function.json
 
-## Swagger Documentation
+============================================
+### Swagger Documentation
+============================================
 
 [https://dev.to/sanjan/how-to-add-swagger-ui-to-a-plain-flask-api-project-with-an-openapi-specification-file-1jl8]
 
